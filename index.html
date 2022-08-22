@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IRPF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h1 class="text-center fs-1">¡Bienvenido!</h1> 
+    <p class="lead text-center fs-5"><b>Coloque sus 12 ingresos mensuales para calcular</b></p>
+
+    <div class="container"
+        <div class="row">
+            <div class="col-8 offset-2"
+                <form id="formulario" class="p-3 mt-5 shadow border">
+                    <h2 class="text-center text-primary fs-2">CALCULADORA DE IRPF</h2>
+
+
+                    <div class="row g-2">
+                        <div class="col-md">
+                          <div class="form-floating">
+                            <input type="text" class="form-control" id="mes" value="" readonly>
+                            <label for="floatingInputGrid">MES</label>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="form-floating">
+                            <input type="number" class="form-control" id="ingreso" value="" aria-label="Floating label select example">
+                                <label for="floatingInputGrid">SALARIO DEL MES</label>
+                          </div>
+                        </div>
+                    </div>
+
+                <div class="d-grid gap-2">
+                    <button id="boton" class="btn btn-outline-primary mt-2" type="submit" value="CONTINUAR">SIGUIENTE
+                    </button>
+                  </div>
+                </form>
+                <hr id="hrmargin">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">MES</th>
+                        <th scope="col">INGRESO EN U$D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <th>ENERO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <th>FEBRERO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <th>MARZO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <th>ABRIL</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <th>MAYO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <th>JUNIO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <th>JULIO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <th>AGOSTO</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <th>SEPTIEMBRE</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <th>OCTUBRE</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <th>NOVIEMBRE</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <th>DICIEMBRE</th>
+                            <th class="muestraIngresos"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                </div> 
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-yellow order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ingreso anual mínimo</h6>
+                        <h2 class="text-center"><p>U$D <span id="ingresoMinimo"></span></p></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ingreso anual total</h6>
+                        <h2 class="text-center"><p>U$D <span id="ingresoTotal"></span></p></h2>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-pink order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ingreso anual máximo</h6>
+                        <h2 class="text-center"><p>U$D <span id="ingresoMaximo"></span></p></h2>
+                    </div>
+                </div>
+            </div>
+	    </div>
+    </div>
+
+        <div>
+            <h2 class="text-center fs-2">Sobre el <a href="acercade.html">IRPF</a></h2> 
+            <p class="lead text-center fs-6">En Uruguay, el Impuesto a las Rentas de las Personas Físicas (IRPF) grava a los sueldos anuales mayores a <b>U$D10.500</b>.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-green order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ingreso anual líquido</h6>
+                        <h2 class="text-center"><p>$USD <span id="muestraLiquido"></span></p></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="lead text-center fs-5" id="mensajeCorresponde"></p>
+        </div>
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/node_modules
+
+gitattributes
+package-lock.json
+package.json
+.DS_Store
